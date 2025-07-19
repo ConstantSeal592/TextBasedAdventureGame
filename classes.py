@@ -32,7 +32,7 @@ class Dialogue:
             text = text.split("&")[1:]
             for i,option in enumerate(text):
                 text[i] = option.split("\n")[1:] # type: ignore   
-            text = text[:10]
+
 
         for i in range(len(text)):
             data = text[i]
@@ -122,7 +122,7 @@ class Classroom:
                 temp.append(self.seating[x][y-1])
         except:
             pass
-#
+
         return temp
         
         
@@ -147,7 +147,7 @@ class Classroom:
                 
 def createStudents():
     studentList = []
-    with open("Students.txt","r") as file:
+    with open("Student.txt","r") as file:
         text = file.read()
         text = text.split("&")[1:]
         for i,person in enumerate(text):
