@@ -78,10 +78,11 @@ class Classroom:
     def __init__(self, subject, player, StudentList) -> None:
         self.subject = subject
         self.grade = 75     #Max 100, Min 0
+        self.player = player
         self.students = [player] + StudentList.copy()
         self.seating = []
         self.createSeating()
-
+        self.GetAdjStudents()
     def getGradeValue(self):
         if self.grade < 8:
             return 'U'
@@ -99,13 +100,36 @@ class Classroom:
             return 'A'
         elif self.grade < 93:
             return 'A*'
-
+    def GetAdjStudents(self):
+        temp = []
+        x,y = divmod(self.playerPos,(int(str((len(self.students)**0.5))[0])+1))
+        try:
+            temp.append(self.seating[x+1][y])
+        except:
+            temp.append(None)
+        try:
+            temp.append(self.seating[x-1][y])
+        except:
+            temp.append(None)
+        try:
+            temp.append(self.seating[x][y+1])
+        except:
+            temp.append(None)
+        try:
+            temp.append(self.seating[x][y-1])
+        except:
+            temp.append(None)
+        return temp
+        
+        
+        
     def createSeating(self):
         classSize = len(self.students)
         arrLen = int(str((classSize**0.5))[0]) + 1
         random.shuffle(self.students)
-        
-
+        for i in range(len(self.students)):
+            if self.player == self.students[i]:
+                self.playerPos = i
         for i in range(arrLen):
             temp = []
             for j in range(arrLen):
