@@ -1,13 +1,81 @@
 &
-Sentence starter ID 1
+1
 Sentence starter
 &
-Sentence starter ID 2
+2
+oh did u know i got a bbl
+&
+3
 Sentence starter
 &
-Sentence starter ID 3
+4
 Sentence starter
+&
 
+
+
+
+
+20
+can i borrow a pencil
 &
-Sentence starter ID 4
-Sentence starter
+21
+*grab leg*
+&
+22
+hows your day been
+&
+23
+so how was your weekend?
+&
+24
+You dropped your rubber
+&
+25
+Are you free after class
+&
+26
+want to grab something to eat after this
+&
+27
+wait, what page are we on
+&
+28
+I totally zoned out, what did i miss?
+&
+29
+Did you finish the homework?
+&
+30
+Wanna ditch next period?
+&
+31
+*inaudible fast speech*
+&
+32
+I saved you a seat... not that i was waiting or anything
+&
+33
+Are we allowed to use notes for the next test
+&
+34
+*pass a note under the desk*
+&
+35
+*draw a moustache on their face*
+&
+36
+我真的很爱你
+&
+37
+*doodle in the corner of their book*
+&
+38
+*ask them a question*
+&
+39
+*molest them*
+&
+40
+*stare at them*
+
