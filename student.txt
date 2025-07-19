@@ -100,36 +100,36 @@ A musical maths nerd who enjoys little more than playing a train game by himself
 8 *blushes*|2
 9 Awwwwww :(|-1
 10 *Slowly rotates his entire body to face you, grinning manically*|3
-11 *offers wet wipe* "Fountain pens require care!"|2
-12 *sings* "Let it gooo"|1
-13 *attempts duolingo chinese*|0
-14 *calculates chair ergonomics*|2
+11 *Glares angrily yet somehow cutely at you*|-2
+12 *sings* Let it gooo|1
+13 *stares blankly*|0
+14 *sits down uncomftably*|0
 15 *hums constitutional anthem*|0
 16 *sniffs armpit* "No mustard?"|-1
-17 *measures with ruler* 5.3cm!|3
-18 *plays air piano on lap*|2
-19 *applauds* 8/10 dismount!|2
+17 *measures with ruler* 5.3cm!|2
+18 *sarcastically* awwwww naaawwww|2
+19 *sighs* well done|0
 20 Only musical kiddies|0
-21 *checks watch* "My leg now!"|1
-22 Coding train simulators!|3
-23 Built new train algorithm|3
-24 *sings* "Rubber duckie..."|2
-25 For math tutoring? Yes!|2
-26 If we discuss Riemann hypotheses|1
-27 Page π of course!|3
-28 *shows 10 pages of notes*|2
-29 *proudly displays completed work*|3
-30 My computer is my sibling|1
+21 *rests and on top*|1
+22 Twain|2
+23 Twain|2
+24 *picks up or smth idk*|0
+25 No, twain game|0
+26 No, twain game|0
+27 *we are already on the correct page*|0
+28 *shows 10 pages of notes*|0
+29 *proudly displays a white stain*|2
+30 Not willingly|0
 31 *covers ears*|-1
-32 *arranges pencils on seat*|2
-33 *creates cheat-sheet program*|3
-34 *writes musical score*|2
-35 *adds musical notes to moustache*|3
-36 *sings* "Do Re Mi Fa So..."|1
-37 *draws treble clefs*|2
-38 Can you integrate this?|3
-39 *installs antivirus*|-2
-40 *stares at math equations*|2
+32 *places pencil pointy end up on the seat then sits down*|2
+33 yes|0
+34 *chucks onto the next person*|0
+35 *tries to stop you*|-2
+36 *stares blankly*|0
+37 *Glares*|-1
+38 *lies*|0
+39 *enjoys, is very submissive*|2
+40 *stares at you*|1
 &
 Ilias
 Oh Ilias, where to start with ilias... Well he managed to eat a pencil once in primary school... and thats really about it
@@ -144,40 +144,40 @@ Oh Ilias, where to start with ilias... Well he managed to eat a pencil once in p
 8 Ho Ho Ho, I know|1
 9 Right you wanna go!... You wanna go mush???|0
 10 *Slams knee into table with such force as to knock the table up a significant amount and cause a ruckus loud enough to attract the attension of the teacher*|-3
-11 *licks ink off lap* "Tasty!"|-2
-12 *shakes back shouting "MONEY PLEASE!"*|0
-13 *screams* KONICHIWA!|-2
-14 *sits on lap* "Comfy!"|-1
-15 Women have RIGHTS? Since when?|-2
-16 *sprays mustard everywhere*|0
-17 *boops your nose* HONK!|0
-18 *sits on your lap at piano*|-2
-19 *falls too* TWINSIES!|1
-20 I AM A KIDDIE!|1
-21 *grabs your other leg* MATCH!|1
+11 *licks ink off lap* "Tasty!"|1
+12 *shakes back shouting* MONEY PLEASE!|2
+13 HALLO ICH HEIBE FROM DEUTSCHLAND!|0
+14 *sits on lap and purrs*|1
+15 Women have RIGHTS? Since when?|2
+16 *Screams autistically* MMMUUUUSSSSTTTTTAAAAARRRRRDDDDDD|1
+17 Right! Well its not that big now is it, have you even seen Kasras|-3
+18 *grins stupidly*|1
+19 *starts tweaking and falls too*|1
+20 Well, can you even blame me|1
+21 *returns the favour*|2
 22 Ate 3 pencils already!|2
 23 Found 5 new things to eat!|3
-24 *eats rubber* CRUNCHY!|-2
-25 *eats homework*|0
-26 *chews on menu*|0
-27 *eats textbook page*|-3
-28 Zoned in on lunch menu|1
+24 *eats rubber*|2
+25 ERRRMMMM I WILL HAVE TO... COMTIMPLATE YOURE OFFER|0
+26 Fat Fuck|-1
+27 *eats textbook page*|-1
+28 Zoned in on lunch menu|0
 29 *shows half-eaten homework*|-1
 30 My pet rock Bouldy|1
 31 *drools* GIBBERISH|0
-32 *licked the seat*|-2
+32 *licked the seat*|1
 33 Notes taste better|1
-34 *eats the note*|0
-35 *eats the pencil*|-2
-36 *attempts terrible chinese* 我爱你汉堡包!|0
-37 *eats corner of book*|-3
-38 Can I eat this?|0
-39 *tries to eat you*|-4
-40 *cross-eyed staring*|0
+34 *eats the note*|1
+35 Nazi time|1
+36 ILIAS IST IN HORTO!|0
+37 *grins cutely*|2
+38 *shrugs*|0
+39 *enjoys it*|2
+40 *cross-eyed stares back*|0
 &
 Brad
-
-
+Entrapenour wanna be
+[Money]
 1 Do you think I have one?!?!|1
 2 Oh well you can call be Brad Pitt|1
 3 Im quite good thanks, how about you?|0
@@ -232,33 +232,33 @@ alex, a level 100 goon who enjoys playing desmos in his sparetime//DESCRIPTION
 8 I know|1
 9 *repeats back mockingly*|-2
 10 *jumps into the ceiling with surprise*|-1
-11 *throws new pen* "Disgrace to stationery"|-2
-12 *restrains you* "Seek help"|-3
+11 You fUcKInG idiot|-2
+12 *Becomes submissive*|-1
 13 *ignores*|-1
-14 *moves away* "Reported"|-3
-15 *records for evidence*|-2
+14 My seat is more comfortable than you|-1
+15 *ignores*|-2
 16 *sanitizes hands*|-1
-17 *compares to golden ratio* "Flawed"|-1
-18 *scoffs* "I prefer solo"|-2
+17 Just because mine is bigger|-1
+18 *scoffs* I prefer solo|-2
 19 *steps over you*|-1
-20 *calls CPS*|-5
-21 *kicks* "Harassment!"|-4
-22 Busy|0
+20 *ignores*|-1
+21 *kicks violently*|-2
+22 Better than yours|0
 23 None of your concern|-1
-24 Not mine|-1
-25 With anyone but you|-2
+24 *picks up silently*|-1
+25 No *said monotonely*|-2
 26 *laughs* Over my dead body|-3
 27 *points silently*|0
-28 *plays Desmos loudly*|-1
-29 *shows perfect work* "Observe"|2
-30 *lies* Quintuplets|0
-31 *noise-cancels*|-2
+28 Not my problem|0
+29 *shows perfect work* Observe|1
+30 Wouldnt you like to know|0
+31 *rolls eyes*|-1
 32 *burns seat* "Contaminated"|-3
 33 *smirks* "Cheating?"|-2
-34 *burns note*|-3
-35 *sues for assault*|-4
+34 *burns note*|-2
+35 *flips the fuck out*|-2
 36 *blocks you*|-3
-37 *solves Desmos problems*|3
-38 *gives impossible equation*|-1
-39 *restrains and arrests*|-5
-40 *analyzes mathematically* "Suboptimal face"|-1
+37 *attempts to snatch the pen*|-1
+38 *sighs* Right another stupid question for me|-1
+39 *tryies to wiggle free but is overpowered and ends up enjoying it*|3
+40 *analyzes mathematically* Suboptimal face|-1
