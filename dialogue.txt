@@ -57,10 +57,10 @@ We should play the piano together some time, unfortunately I only have 1 seat
 *falls off chair*
 &
 20
-can i borrow a pencil
+do you like kiddies?
 &
 21
-*grab leg*
+*grabs leg*
 &
 22
 hows your day been
@@ -84,10 +84,10 @@ wait, what page are we on
 I totally zoned out, what did i miss?
 &
 29
-Did you finish the homework?
+Did you finish (on) the homework?
 &
 30
-Wanna ditch next period?
+do you have any siblings?
 &
 31
 *inaudible fast speech*
@@ -102,7 +102,7 @@ Are we allowed to use notes for the next test
 *pass a note under the desk*
 &
 35
-*draw a moustache on their face*
+*draws a moustache on their face*
 &
 36
 我真的很爱你
