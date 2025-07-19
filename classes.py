@@ -12,8 +12,8 @@ class Student:
         self.dialogue = data[3:]
 
     def response(self,id):
-        response,reaction = self.dialogue[id].split("¦")
-        return response,reaction
+        response,reaction = self.dialogue[id-1].split("|")
+        return response,int(reaction)
     
     def __repr__(self) -> str:
         return f"Obj: {self.name}"
@@ -34,14 +34,13 @@ class Dialogue:
 
         for i in range(len(text)):
             data = text[i]
-            self.dialogue[f"{data[0]}"] = data[1:]
-            print(f"{data[0]}")
-        print(self.dialogue)
-    
+            self.dialogue[f"{data[0]}"] = data[1]
+            
+
      def tryDialogue(self,id,student):
-        print(self.dialogue[id][0])
-        response,reaction = student.response(id)
-        print(response)
+        print(self.dialogue[id])
+        response,reaction = student.response(int(id))
+        print(response.split(" ",1)[1])
         student.affection += reaction
         if reaction < 0:
             print(f"{student.name}'s affection has lowered by {reaction}")
@@ -116,7 +115,6 @@ class Classroom:
                 except:
                     temp.append(None)
             self.seating.append(temp)
-        print(self.seating)
 
                 
 def createStudents():
@@ -130,13 +128,14 @@ def createStudents():
     for i in range(len(text)):
         data = text[i]
         studentList.append(Student(data))                
-
+    return studentList
 
 def InstantiateObjects():
     plr = Player()
     StudentList = createStudents()
     Classes = [(Classroom(sub, plr, StudentList)) for sub in ["Physics", "Maths", "Further Maths", "Physics"]]
     dialogue = Dialogue()
+    return plr, StudentList, Classes,dialogue 
 
-    return plr, StudentList, Classes, dialogue
-
+player, students, Classes, dialogue = InstantiateObjects()
+dialogue.tryDialogue("4",students[1])

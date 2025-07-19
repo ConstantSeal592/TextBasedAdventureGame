@@ -2,85 +2,88 @@
 kasra
 a level 10 goon who enjoys playing desmos in his sparetime//DESCRIPTION
 [maths,chinese,eSports] //INTERESTS 
-1 Yeah sure haha¦1
-2 i thought it was harold?¦-1
-3 just rape me already¦0
-4 oh ill just copy you then¦-1
-5 Thats not funny mush¦-1
-6 Bro what *looks at you in disguist*¦-3
-7 *kasra takes a long hard glance then acts like nothing happened*¦3
-8 *kasra takes it as sarcasm and ignores you*¦-1
-9 not very nice mush¦-1
-10 *slurps and does the same to you*¦2
+1 Yeah sure haha|1
+2 i thought it was harold?|-1
+3 just rape me already|0
+4 oh ill just copy you then|-1
+5 Thats not funny mush|-1
+6 Bro what *looks at you in disguist*|-3
+7 *kasra takes a long hard glance then acts like nothing happened*|3
+8 *kasra takes it as sarcasm and ignores you*|-1
+9 not very nice mush|-1
+10 *slurps and does the same to you*|2
 &
 Yashrith
 Nothing, hes a boring person
-1 no not really, *proceeds to give you a pencil anyways*¦0
-2 g-g-g-g-get out!¦-1
-3 juuust fine¦1
-4 well your wrong now arent you¦1
-5 *you dont get a laugh and you feel your aura trickling down*¦-1 
-6 yes mush¦1
-7 slaps it¦3
-8 always has been¦1
-9 NOW!¦1
-10 *jolts back a bit and starts sniggering*¦1
+
+1 no not really, *proceeds to give you a pencil anyways*|0
+2 g-g-g-g-get out!|-1
+3 juuust fine|1
+4 well your wrong now arent you|1
+5 *you dont get a laugh and you feel your aura trickling down*|-1 
+6 yes mush|1
+7 slaps it|3
+8 always has been|1
+9 NOW!|1
+10 *jolts back a bit and starts sniggering*|1
 &
 Lewis
 A musical maths nerd who enjoys little more than playing a train game by himself while all his friends talk behind his back
 [music, maths, programmerWannaBe] 
-1 *Sighs* BUT I WANT IT BACK!¦0
-2 You can call me Louis if you want¦1
-3 I dont know, Hao about you?¦1
-4 ...Oh I know where I went wrong¦-1
-5 I could sure go for some dog¦1
-6 Errrmmm, Im really not sure¦-1
-7 *Stares intensly*¦1
-8 *blushes*¦2
-9 Awwwwww :(¦-1
-10 *Slowly rotates his entire body to face you, grinning manically*¦3
+1 *Sighs* BUT I WANT IT BACK!|0
+2 You can call me Louis if you want|1
+3 I dont know, Hao about you?|1
+4 ...Oh I know where I went wrong|-1
+5 I could sure go for some dog|1
+6 Errrmmm, Im really not sure|-1
+7 *Stares intensly*|1
+8 *blushes*|2
+9 Awwwwww :(|-1
+10 *Slowly rotates his entire body to face you, grinning manically*|3
 &
 Ilias
 Oh Ilias, where to start with ilias... Well he managed to eat a pencil once in primary school... and thats really about it
 [idiot]
-1 Sure *Hands over a well chewed still soggy pencil*¦-1
-2 You can call me the briscuit, or briscone, either or¦1
-3 Ehhhh good ta¦0
-4 Well you see you forgot to quantomly entangle the square of the hypotenuse with the derivitive of an anti muon neutrino. Thats were you went wrong¦1
-5 You cant be saying that mush!¦-1
-6 Oh yeah it does ;) (inreality a screw guage micrometer is required to measure 'its' girthyness)¦2
-7 *Slams finger into arse*¦1
-8 Ho Ho Ho, I know¦1
-9 Right you wanna go!... You wanna go mush???¦0
-10 *Slams knee into table with such force as to knock the table up a significant amount and cause a ruckus loud enough to attract the attension of the teacher*¦-3
+1 Sure *Hands over a well chewed still soggy pencil*|-1
+2 You can call me the briscuit, or briscone, either or|1
+3 Ehhhh good ta|0
+4 Well you see you forgot to quantomly entangle the square of the hypotenuse with the derivitive of an anti muon neutrino. Thats were you went wrong|1
+5 You cant be saying that mush!|-1
+6 Oh yeah it does ;) (inreality a screw guage micrometer is required to measure 'its' girthyness)|2
+7 *Slams finger into arse*|1
+8 Ho Ho Ho, I know|1
+9 Right you wanna go!... You wanna go mush???|0
+10 *Slams knee into table with such force as to knock the table up a significant amount and cause a ruckus loud enough to attract the attension of the teacher*|-3
 &
 Brad
-1 Do you think I have one?!?!¦1
-2 Oh well you can call be Brad Pitt¦1
-3 Im quite good thanks, how about you?¦0
-4 Ahhh ssshhhhiiiitttt¦0
-5 Haha, personally im a fan of cat¦1
-6 *gets trauma and breaks down crying*¦-5
-7 Really I have a fountain pen too :D *touches nibs*¦3
-8 Haha, noooo, I dont think so¦2
-9 Awwww :(¦-1
-10 WHAT ON EARTH ARE YOU DOING?!?!¦-2
+
+
+1 Do you think I have one?!?!|1
+2 Oh well you can call be Brad Pitt|1
+3 Im quite good thanks, how about you?|0
+4 Ahhh ssshhhhiiiitttt|0
+5 Haha, personally im a fan of cat|1
+6 *gets trauma and breaks down crying*|-5
+7 Really I have a fountain pen too :D *touches nibs*|3
+8 Haha, noooo, I dont think so|2
+9 Awwww :(|-1
+10 WHAT ON EARTH ARE YOU DOING?!?!|-2
 &
 Alex
 alex, a level 100 goon who enjoys playing desmos in his sparetime//DESCRIPTION
 [maths,homosexual activities] //INTERESTS 
-1 You should be prepared¦-1
-2 Didnt ask¦-1
-3 Do your work and stop turning around to talk to me¦-1
-4 Well lets see where you went wrong *sighs*¦0
-5 You really should pay attension in form, this was told to you¦-1
-6 *smiles gleefully*¦3
-6 Why yes it does ;)¦3
-6 Do you want to find out ;)¦3
-7 Idiot¦-1
-7 Usually people need to pay for a show like this¦1
-7 Wacks Chuhaos exposed and vulnerable arse¦3
-8 I know¦1
-9 *repeats back mockingly*¦-2
-10 *jumps into the ceiling with surprise*¦-1
-10 *slowly turns, a sick smile on his face¦3
+1 You should be prepared|-1
+2 Didnt ask|-1
+3 Do your work and stop turning around to talk to me|-1
+4 Well lets see where you went wrong *sighs*|0
+5 You really should pay attension in form, this was told to you|-1
+6 *smiles gleefully*|3
+6 Why yes it does ;)|3
+6 Do you want to find out ;)|3
+7 Idiot|-1
+7 Usually people need to pay for a show like this|1
+7 Wacks Chuhaos exposed and vulnerable arse|3
+8 I know|1
+9 *repeats back mockingly*|-2
+10 *jumps into the ceiling with surprise*|-1
+10 *slowly turns, a sick smile on his face|3
