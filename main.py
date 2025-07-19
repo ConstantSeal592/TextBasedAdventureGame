@@ -49,22 +49,22 @@ def typeAskNum(prompt, Min=0, Max=4):
     return getNumberInput(Min, Max)
 
 def newGameDialogue():
-    typeWrite("Xingping, Yangshuo, China | 05/02/25 - 20:10 UTC+8")
-    typeWrite("Chuhao walks along a dimmly lit allyway... 2 shadowy figures follow closely behind.")
-    typeWrite("He walks around a corner onto a wider street where the dazzling white lights of a Ford Transit T-350 blind him.")
-    typeWrite("The vehicle doesnt slow for the frozen Chuhoa as the 3.5 tonne van slams into his body.")
-    typeWrite("...")
-    typeWrite("The two figures move out of the shadows to quickly and efficiently move his chinese body into the back of the now blood stained van.")
-    time.sleep(3)
-    print()
-    print()
-    print()
-    typeWrite("Caistor, Lincolnshire, England | 06/02/25 - 08:45 UTC+0")
-    typeWrite("Chuhao awakes slowly tied to a chair in a clean tidy office. On the wall, hangs a clock and several peices of artwork.")
-    typeWrite("Suddenly the door slams open and an angry scottish woman enters accompanied with a small bedraggled man dressed in all black.")
-    typeWrite("The woman takes her place behind the desk infront of Chuhao glaring intensly at him")
+    # typeWrite("Xingping, Yangshuo, China | 05/02/25 - 20:10 UTC+8")
+    # typeWrite("Chuhao walks along a dimmly lit allyway... 2 shadowy figures follow closely behind.")
+    # typeWrite("He walks around a corner onto a wider street where the dazzling white lights of a Ford Transit T-350 blind him.")
+    # typeWrite("The vehicle doesnt slow for the frozen Chuhoa as the 3.5 tonne van slams into his body.")
+    # typeWrite("...")
+    # typeWrite("The two figures move out of the shadows to quickly and efficiently move his chinese body into the back of the now blood stained van.")
+    # time.sleep(3)
+    # print()
+    # print()
+    # print()
+    # typeWrite("Caistor, Lincolnshire, England | 06/02/25 - 08:45 UTC+0")
+    # typeWrite("Chuhao awakes slowly tied to a chair in a clean tidy office. On the wall, hangs a clock and several peices of artwork.")
+    # typeWrite("Suddenly the door slams open and an angry scottish woman enters accompanied with a small bedraggled man dressed in all black.")
+    # typeWrite("The woman takes her place behind the desk infront of Chuhao glaring intensly at him")
 
-    game(InstantiateObjects())
+    game(*InstantiateObjects())
 
 SQUARESIDES = 5
 def displayEndings():
@@ -88,36 +88,38 @@ def displayEndings():
 
 
 def getRandID(usedIDs, IDs, dialogue):
-    while len(IDs) < 3:
+    while True:
         rand = random.randint(1, len(dialogue.dialogue))
         if rand in usedIDs:
             if usedIDs == len(dialogue.dialogue):
                 usedIDs = []
-                IDs.append(rand)
+                return rand
             else:
                 continue
         elif rand in IDs:
             continue
         else:
-            IDs.append(rand)
+            return rand
 
 def game(plr, studentList, classes, dialogue):
     usedIDs = []
     for subject in classes:
         typeWrite(f"You enter {subject.subject}...")
         print()
-        
+
         actions = 5
         while actions > 0:
             IDs = []
             for i in range(0,3,1):
-                getRandID(usedIDs, IDs, dialogue)
-                IDs[-1] = [IDs[-1], random.choice(subject.GetAdjStudents())]
+                IDs.append([str(getRandID(usedIDs, IDs, dialogue)), random.choice(subject.GetAdjStudents())])
+                print(IDs)
+
+            print(IDs)
 
             choice = typeAskSelection("Choose an action to take:",
-                                      f"{dialogue.dialogue[IDs[0][0]]} to {IDs[0][1]}",
-                                      f"{dialogue.dialogue[IDs[1][0]]} to {IDs[1][1]}",
-                                      f"{dialogue.dialogue[IDs[2][0]]} to {IDs[2][1]}",
+                                      f"{dialogue.dialogue[IDs[0][0]]} to {IDs[0][1].name}",
+                                      f"{dialogue.dialogue[IDs[1][0]]} to {IDs[1][1].name}",
+                                      f"{dialogue.dialogue[IDs[2][0]]} to {IDs[2][1].name}",
                                       "Focus on work")
             
             if choice == 4:
@@ -148,10 +150,11 @@ def main():
             '#'*40
         ]))
     
-    choice = typeAskSelection("Choose Your Action:",
-                              "Start new game",
-                              "Load game",
-                              "View endings")
+    # choice = typeAskSelection("Choose Your Action:",
+    #                           "Start new game",
+    #                           "Load game",
+    #                           "View endings")
+    choice = 1
     if choice == 1:
         newGameDialogue()
     elif choice == 2:

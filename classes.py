@@ -12,6 +12,7 @@ class Student:
         self.dialogue = data[3:]
 
     def response(self,id):
+        print(id)
         response,reaction = self.dialogue[id-1].split("|")
         return response,int(reaction)
     
@@ -102,19 +103,19 @@ class Classroom:
         try:
             temp.append(self.seating[x+1][y])
         except:
-            temp.append(None)
+            pass
         try:
             temp.append(self.seating[x-1][y])
         except:
-            temp.append(None)
+            pass
         try:
             temp.append(self.seating[x][y+1])
         except:
-            temp.append(None)
+            pass
         try:
             temp.append(self.seating[x][y-1])
         except:
-            temp.append(None)
+            pass
         return temp
         
         
@@ -133,7 +134,7 @@ class Classroom:
                     temp.append(self.students[j+ i*arrLen])
                     #print(self.students[j+ i*arrLen].dialogue) 
                 except:
-                    temp.append(None)
+                    pass
             self.seating.append(temp)
 
                 
