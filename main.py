@@ -58,7 +58,7 @@ def newGameDialogue():
     typeWrite("Xingping, Yangshuo, China | 05/02/25 - 20:10 UTC+8")
     typeWrite("Chuhao walks along a dimmly lit allyway... 2 shadowy figures follow closely behind.")
     typeWrite("He walks around a corner onto a wider street where the dazzling white lights of a Ford Transit T-350 blind him.")
-    typeWrite("The vehicle doesnt slow for the frozen Chuhoa as the 3.5 tonne van slams into his body.")
+    typeWrite("The vehicle doesnt slow for the frozen Chuhao as the 3.5 tonne van slams into his body.")
     typeWrite("...")
     typeWrite("The two figures move out of the shadows to quickly and efficiently move his chinese body into the back of the now blood stained van.")
     time.sleep(3)
