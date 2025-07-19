@@ -1,6 +1,6 @@
 import time
 import random
-from fileInteraction import LoadEndings,SaveNewEnding
+from fileInteraction import LoadEndings,SaveNewEnding,saveAll,loadAll
 from classes import InstantiateObjects,getGradeValue
 
 NAME = "HEARTSTRING HIGH"
@@ -71,7 +71,7 @@ def newGameDialogue():
     typeWrite("Chuhao is then dragged out of the office and escourted to his first lesson...")
     print('\n\n')
 
-    game(*InstantiateObjects())
+    game(0, *InstantiateObjects())
 
 SQUARESIDES = 5
 def printEnding(ending):
@@ -122,10 +122,10 @@ def calcAvgGrade(classes):
 
     return getGradeValue(total)
 
-def game(plr, studentList, classes, dialogue):
+def game(day, plr, studentList, classes, dialogue):
     usedIDs = []
-    for i in range(0,3,1):
-        typeWrite(f"Day {i+1}...")
+    for d in range(day,3,1):
+        typeWrite(f"Day {d+1}...")
         for subject in classes:
             typeWrite(f"You enter {subject.subject}...")
             print()
@@ -165,6 +165,8 @@ def game(plr, studentList, classes, dialogue):
                 print('\n')
 
                 actions -= 1
+
+        saveAll(d,plr,studentList,classes)
 
         typeWrite("You reflect on the day...")
         typeWrite("Name".ljust(20)+'|'+"Affection")
@@ -206,6 +208,14 @@ def game(plr, studentList, classes, dialogue):
         
         data = SaveNewEnding('Fail', target.name, calcAvgGrade())
         printEnding(data)
+    elif success and target.name == 'Alex':     #Alex
+        typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
+        typeWrite("Dont be so proud of yourself says Mrs Buck...")
+        typeWrite("Alex said yes... Im sorry for you")
+        print('\n\n')
+        typeWrite("You got the... Alex Ending!")
+        
+        data = SaveNewEnding('Alex', target.name, calcAvgGrade())
     elif success:     #Good
         typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
         typeWrite("I hear you got a date says Mrs Buck, to which Chuhao vigorously nods")
@@ -229,23 +239,30 @@ def game(plr, studentList, classes, dialogue):
 
 def main():
     print('\n'.join([
-            '#'*40,
-            '',
-            ' '*((40-len(NAME))//2) + NAME,
-            '',
-            '#'*40
-        ]))
+          '#'*40,
+          '',
+          ' '*((40-len(NAME))//2) + NAME,
+          '',
+          '#'*40
+    ]))
     
-    # choice = typeAskSelection("Choose Your Action:",
-    #                           "Start new game",
-    #                           "Load game",
-    #                           "View endings")
-    choice = 1
-    if choice == 1:
-        newGameDialogue()
-    elif choice == 2:
-        pass
-    elif choice == 3:
-        displayEndings()
+    while True:
+        
+        choice = typeAskSelection("Choose Your Action:",
+                                "Start new game",
+                                "Load game",
+                                "View endings")
+        
+        if choice == 1:
+            newGameDialogue()
+        elif choice == 2:
+            plr, StudentList, Classes, dialogue = InstantiateObjects()
+            if plr == None:
+                typeWrite("No Valid Save")
+                continue
+            typeWrite("Save loaded")
+            game(*loadAll(),dialogue)
+        elif choice == 3:
+            displayEndings()
     
 main()
