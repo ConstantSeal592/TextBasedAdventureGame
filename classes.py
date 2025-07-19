@@ -53,7 +53,6 @@ class Player:
     def __init__(self) -> None:
         self.inventory = []
         self.focus = 5
-        self.grades = ["A","A","A","A"]
 
 
     def interact(self,action):
@@ -77,23 +76,30 @@ class Item:
     
 
 class Classroom:
-    def __init__(self,player) -> None:
-        self.students = [player]
+    def __init__(self, subject, player, StudentList) -> None:
+        self.subject = subject
+        self.grade = 75     #Max 100, Min 0
+        self.students = [player] + StudentList.copy()
         self.seating = []
-        self.createStudents()
         self.createSeating()
 
-    def createStudents(self):
-        with open("Students.txt","r") as file:
-            text = file.read()
-            text = text.split("&")[1:]
-            for i,person in enumerate(text):
-                text[i] = person.split("\n")[1:] # type: ignore   
-
-        for i in range(len(text)):
-            data = text[i]
-            self.students.append(Student(data))
-            
+    def getGradeValue(self):
+        if self.grade < 8:
+            return 'U'
+        elif self.grade < 14:
+            return 'F'
+        elif self.grade < 25:
+            return 'E'
+        elif self.grade < 37:
+            return 'D'
+        elif self.grade < 48:
+            return 'C'
+        elif self.grade < 65:
+            return 'B'
+        elif self.grade < 85:
+            return 'A'
+        elif self.grade < 93:
+            return 'A*'
 
     def createSeating(self):
         classSize = len(self.students)
@@ -111,11 +117,25 @@ class Classroom:
                     temp.append(None)
             self.seating.append(temp)
         print(self.seating)
+
                 
-                
+def createStudents():
+    studentList = []
+    with open("Students.txt","r") as file:
+        text = file.read()
+        text = text.split("&")[1:]
+        for i,person in enumerate(text):
+            text[i] = person.split("\n")[1:] # type: ignore   
+
+    for i in range(len(text)):
+        data = text[i]
+        studentList.append(Student(data))                
 
 
-player = Player()
-speech = Dialogue()
-c3 = Classroom(player)
+def InstantiateObjects():
+    plr = Player()
+    StudentList = createStudents()
+    Classes = [(Classroom(sub, plr, StudentList)) for sub in ["Physics", "Maths", "Further Maths", "Physics"]]
+
+    return plr, StudentList, Classes
 
