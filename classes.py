@@ -102,7 +102,7 @@ class Classroom:
     def GetAdjStudents(self):
         temp = []
         x,y = divmod(self.playerPos,(int(str((len(self.students)**0.5))[0])+1))
-        print(x,y)
+
         try:
             temp.append(self.seating[x+1][y])
         except:
@@ -122,7 +122,7 @@ class Classroom:
                 temp.append(self.seating[x][y-1])
         except:
             pass
-        print(temp)
+#
         return temp
         
         
