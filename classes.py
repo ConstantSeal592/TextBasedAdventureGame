@@ -80,24 +80,6 @@ class Classroom:
         self.seating = []
         self.createSeating()
         self.GetAdjStudents()
-
-    def getGradeValue(self):
-        if self.grade < 8:
-            return 'U'
-        elif self.grade < 14:
-            return 'F'
-        elif self.grade < 25:
-            return 'E'
-        elif self.grade < 37:
-            return 'D'
-        elif self.grade < 48:
-            return 'C'
-        elif self.grade < 65:
-            return 'B'
-        elif self.grade < 85:
-            return 'A'
-        elif self.grade < 93:
-            return 'A*'
         
     def GetAdjStudents(self):
         temp = []
@@ -143,6 +125,24 @@ class Classroom:
                 except:
                     pass
             self.seating.append(temp)
+
+def getGradeValue(grade):
+    if grade < 8:
+        return 'U'
+    elif grade < 14:
+        return 'F'
+    elif grade < 25:
+        return 'E'
+    elif grade < 37:
+        return 'D'
+    elif grade < 48:
+        return 'C'
+    elif grade < 65:
+        return 'B'
+    elif grade < 85:
+        return 'A'
+    elif grade < 93:
+        return 'A*'
 
                 
 def createStudents():

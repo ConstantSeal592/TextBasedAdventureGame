@@ -1,7 +1,7 @@
 import time
 import random
-from fileInteraction import LoadEndings
-from classes import InstantiateObjects
+from fileInteraction import LoadEndings,SaveNewEnding
+from classes import InstantiateObjects,getGradeValue
 
 NAME = "HEARTSTRING HIGH"
 
@@ -51,42 +51,51 @@ def typeAskNum(prompt, Min=0, Max=4):
     return getNumberInput(Min, Max)
 
 def newGameDialogue():
-    # typeWrite("Xingping, Yangshuo, China | 05/02/25 - 20:10 UTC+8")
-    # typeWrite("Chuhao walks along a dimmly lit allyway... 2 shadowy figures follow closely behind.")
-    # typeWrite("He walks around a corner onto a wider street where the dazzling white lights of a Ford Transit T-350 blind him.")
-    # typeWrite("The vehicle doesnt slow for the frozen Chuhoa as the 3.5 tonne van slams into his body.")
-    # typeWrite("...")
-    # typeWrite("The two figures move out of the shadows to quickly and efficiently move his chinese body into the back of the now blood stained van.")
-    # time.sleep(3)
-    # print()
-    # print()
-    # print()
-    # typeWrite("Caistor, Lincolnshire, England | 06/02/25 - 08:45 UTC+0")
-    # typeWrite("Chuhao awakes slowly tied to a chair in a clean tidy office. On the wall, hangs a clock and several peices of artwork.")
-    # typeWrite("Suddenly the door slams open and an angry scottish woman enters accompanied with a small bedraggled man dressed in all black.")
-    # typeWrite("The woman takes her place behind the desk infront of Chuhao glaring intensly at him")
+    typeWrite("Xingping, Yangshuo, China | 05/02/25 - 20:10 UTC+8")
+    typeWrite("Chuhao walks along a dimmly lit allyway... 2 shadowy figures follow closely behind.")
+    typeWrite("He walks around a corner onto a wider street where the dazzling white lights of a Ford Transit T-350 blind him.")
+    typeWrite("The vehicle doesnt slow for the frozen Chuhoa as the 3.5 tonne van slams into his body.")
+    typeWrite("...")
+    typeWrite("The two figures move out of the shadows to quickly and efficiently move his chinese body into the back of the now blood stained van.")
+    time.sleep(3)
+    print()
+    print()
+    print()
+    typeWrite("Caistor, Lincolnshire, England | 06/02/25 - 08:45 UTC+0")
+    typeWrite("Chuhao awakes slowly tied to a chair in a clean tidy office. On the wall, hangs a clock and several peices of artwork.")
+    typeWrite("Suddenly the door slams open and an angry scottish woman enters accompanied with a small bedraggled man dressed in all black.")
+    typeWrite("The woman takes her place behind the desk infront of Chuhao glaring intensly at him")
+    typeWrite("The woman: 'My name is Mrs Buck, and if you dont get a date by the end of the week, he will lynch you!' gesturing to the man in black")
+    time.sleep(3)
+    print()
+    typeWrite("Chuhao is then dragged out of the office and escourted to his first lesson...")
+    print('\n\n')
 
     game(*InstantiateObjects())
 
 SQUARESIDES = 5
+def printEnding(ending):
+    print('# '*SQUARESIDES)
+    for i in range(0, SQUARESIDES-2, 1):
+        if i == (SQUARESIDES - 2)//2:
+            print('#' + ending['EndingName'].center(SQUARESIDES*2 - 3) + '#' + ' '*4 + f"Date: {ending['DateName']}")
+        elif i == (SQUARESIDES - 2)//2 - 1:
+            print('#' + ' '*((SQUARESIDES-2)*2 + 1) + '#' + ' '*4 + f"Time: {ending['Time']}")
+        elif i == (SQUARESIDES - 2)//2 + 1:
+            print('#' + ' '*((SQUARESIDES-2)*2 + 1) + '#' + ' '*4 + f"Average Grade: {ending['AvgGrade']}")
+        else:
+            print('#' + ' '*((SQUARESIDES-2)*2 + 1) + '#')        
+    print('# '*SQUARESIDES)
+    print()
+
+
 def displayEndings():
     endings = LoadEndings()
 
     typeWrite('Endings:')
     print()
     for ending in endings:
-        print('# '*SQUARESIDES)
-        for i in range(0, SQUARESIDES-2, 1):
-            if i == (SQUARESIDES - 2)//2:
-                print('#' + ending['EndingName'].center(SQUARESIDES*2 - 3) + '#' + ' '*4 + f"Date: {ending['DateName']}")
-            elif i == (SQUARESIDES - 2)//2 - 1:
-                print('#' + ' '*((SQUARESIDES-2)*2 + 1) + '#' + ' '*4 + f"Time: {ending['Time']}")
-            elif i == (SQUARESIDES - 2)//2 + 1:
-                print('#' + ' '*((SQUARESIDES-2)*2 + 1) + '#' + ' '*4 + f"Average Grade: {ending['AvgGrade']}")
-            else:
-                print('#' + ' '*((SQUARESIDES-2)*2 + 1) + '#')        
-        print('# '*SQUARESIDES)
-        print()
+        printEnding()
 
 
 def getRandID(usedIDs, IDs, dialogue):
@@ -103,52 +112,118 @@ def getRandID(usedIDs, IDs, dialogue):
             continue
         else:
             return rand
+        
+def calcAvgGrade(classes):
+    total = 0
+    for sub in classes:
+        total += sub.grade
+    
+    total /= len(classes)
+
+    return getGradeValue(total)
 
 def game(plr, studentList, classes, dialogue):
     usedIDs = []
-    for subject in classes:
-        typeWrite(f"You enter {subject.subject}...")
-        print()
+    for i in range(0,3,1):
+        typeWrite(f"Day {i+1}...")
+        for subject in classes:
+            typeWrite(f"You enter {subject.subject}...")
+            print()
 
-        actions = 5
-        while actions > 0:
-            IDs = []
-            for i in range(0,3,1):
-                ID = getRandID(usedIDs, IDs, dialogue)
-                usedIDs.append(ID)
-                if len(usedIDs) == len(dialogue.dialogue):
-                    usedIDs = []
+            actions = 0
+            while actions > 0:
+                IDs = []
+                for i in range(0,3,1):
+                    ID = getRandID(usedIDs, IDs, dialogue)
+                    usedIDs.append(ID)
+                    if len(usedIDs) == len(dialogue.dialogue):
+                        usedIDs = []
+                    
+                    IDs.append([str(ID), random.choice(subject.GetAdjStudents())])
+
+                choice = typeAskSelection("Choose an action to take:",
+                                        f"{dialogue.dialogue[IDs[0][0]]} to {IDs[0][1].name}",
+                                        f"{dialogue.dialogue[IDs[1][0]]} to {IDs[1][1].name}",
+                                        f"{dialogue.dialogue[IDs[2][0]]} to {IDs[2][1].name}",
+                                        "Focus on work")
                 
-                IDs.append([str(ID), random.choice(subject.GetAdjStudents())])
+                if choice == 4:
+                    subject.grade += random.randint(5,8)
+                    subject.grade = min(100,max(0,subject.grade))
 
-            choice = typeAskSelection("Choose an action to take:",
-                                      f"{dialogue.dialogue[IDs[0][0]]} to {IDs[0][1].name}",
-                                      f"{dialogue.dialogue[IDs[1][0]]} to {IDs[1][1].name}",
-                                      f"{dialogue.dialogue[IDs[2][0]]} to {IDs[2][1].name}",
-                                      "Focus on work")
-            
-            if choice == 4:
-                subject.grade += random.randint(3,5)
-                subject.grade = min(100,max(0,subject.grade))
+                    typeWrite(random.choice(FOCUSPHRASES))
 
-                typeWrite(random.choice(FOCUSPHRASES))
+                else:
+                    choice = IDs[choice-1]
+                    responce, reaction = dialogue.tryDialogue(*choice)
+                    typeWrite(f"{choice[1].name}: {responce}")
+                    typeWrite(f"{choice[1].name}'s affection has changed by {reaction}")
 
-            else:
-                choice = IDs[choice-1]
-                responce, reaction = dialogue.tryDialogue(*choice)
-                typeWrite(f"{choice[1].name}: {responce}")
-                typeWrite(f"{choice[1].name}'s affection has changed by {reaction}")
-            
-            print('\n')
+                    subject.grade -= random.randint(6,7)
+                    subject.grade = min(100,max(0,subject.grade))
+                
+                print('\n')
 
-            actions -= 1
+                actions -= 1
 
+        typeWrite("You reflect on the day...")
+        typeWrite("Name".ljust(20)+'|'+"Affection")
+        typeWrite('-'*20+'+'+'-'*10)
+        for student in studentList:
+            typeWrite(student.name.ljust(20)+'|'+str(student.affection))
 
-        print('\n\nDONE\n\n')
+    typeWrite("Chuhao's time has come... Mrs Buck will lynch him if he couldnt go out on a date")
+    typeWrite("But would anyone say yes?...")
 
+    Names = []
+    for student in studentList:
+        Names.append(student.name)
 
+    choice = typeAskSelection("Who should Chuhao ask out?",*Names)
 
+    typeWrite(f"Chuhao nervously walks up to {Names[choice-1]} just before they leave the gates...")
+    typeWrite("Chuzzy asks them out...")
 
+    target = None
+
+    for student in studentList:
+        if student.name == Names[choice-1]:
+            target = student
+
+    num = random.randint(1,10)
+    success = num < target.affection
+
+    typeWrite(f"They say...")
+    typeWrite(f"... {'Yes' if success else 'No'}")
+
+    if success and calcAvgGrade() in ['U','F','E','D','C']:     #Fail
+        typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
+        typeWrite("I hear you got a date says Mrs Buck, to which Chuhao vigorously nods")
+        typeWrite("Well you managed it... but unfortunately your average grade was too low...")
+        typeWrite("Therefore you are now obligated to go to Caistor Yarborough... good luck getting a date there")
+        print('\n\n')
+        typeWrite("You got the... Fail Ending!")
+        
+        data = SaveNewEnding('Fail', target.name, calcAvgGrade())
+        printEnding(data)
+    elif success:     #Good
+        typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
+        typeWrite("I hear you got a date says Mrs Buck, to which Chuhao vigorously nods")
+        typeWrite("Well you managed it, so I suppose we will deport you, sighs Mrs Buck")
+        print('\n\n')
+        typeWrite("You got the... Good Ending!")
+        
+        data = SaveNewEnding('Good', target.name, calcAvgGrade())
+        printEnding(data)
+    else:   #Bad
+        typeWrite("Chuhao returns to Mrs Buck's office gloomily")
+        typeWrite("HA! I knew no one would date you, screamed Mrs Buck!")
+        typeWrite("Prepare... to be... castrated")
+        print('\n\n')
+        typeWrite("You got the... Bad Ending!")
+        
+        data = SaveNewEnding('Bad', target.name, calcAvgGrade())
+        printEnding(data)
 
 
 

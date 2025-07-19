@@ -16,12 +16,15 @@ def LoadEndings():
 
 def SaveNewEnding(EndingName, DateName, AvgGrade):
     link = open('Endings.txt', 'a')
-    link.write(json.dumps({
+    data = {
         'EndingName': EndingName,
         'Time': str(datetime.datetime.now())[:10],
         'DateName': DateName,
         'AvgGrade': AvgGrade
-    }) + '\n')
+    }
+    link.write(json.dumps(data) + '\n')
+
+    return data
 
 
 def saveClass(object,component):
