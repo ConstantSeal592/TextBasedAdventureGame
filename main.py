@@ -4,6 +4,7 @@ from fileInteraction import LoadEndings,SaveNewEnding,saveAll,loadAll
 from classes import InstantiateObjects,getGradeValue
 
 NAME = "HEARTSTRING HIGH"
+DEBUGMODE = True
 
 FOCUSPHRASES = ["You lock in"]
 
@@ -13,12 +14,15 @@ def typeWrite(message, addNewLine=True, endOfLinePause = 0.75):
         if char == '.':
             section = message[i-2:i+3]
             if section.count('.') >= 3:
-                time.sleep(0.75)
+                if DEBUGMODE == False:
+                    time.sleep(0.75)
         elif not char in [' ', '\n']:
-            time.sleep(random.randint(3,14)/100)
+            if DEBUGMODE == False:
+                time.sleep(random.randint(3,14)/100)
 
     if addNewLine == True:
-        time.sleep(endOfLinePause)
+        if DEBUGMODE == False:
+            time.sleep(endOfLinePause)
         print()
 
 def getNumberInput(Min, Max):
@@ -95,7 +99,7 @@ def displayEndings():
     typeWrite('Endings:')
     print()
     for ending in endings:
-        printEnding()
+        printEnding(ending)
 
 
 def getRandID(usedIDs, IDs, dialogue):
