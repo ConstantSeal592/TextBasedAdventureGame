@@ -5,6 +5,8 @@ from classes import InstantiateObjects
 
 NAME = "HEARTSTRING HIGH"
 
+FOCUSPHRASES = ["You lock in"]
+
 def typeWrite(message, addNewLine=True, endOfLinePause = 0.75):
     for i,char in enumerate(message):
         print(char, end='', flush=True)
@@ -90,13 +92,14 @@ def displayEndings():
 def getRandID(usedIDs, IDs, dialogue):
     while True:
         rand = random.randint(1, len(dialogue.dialogue))
-        if rand in usedIDs:
-            if usedIDs == len(dialogue.dialogue):
-                usedIDs = []
-                return rand
-            else:
-                continue
-        elif rand in IDs:
+
+        used = False
+        for i in range(0, len(IDs), 1):
+            if rand == IDs[i][0]:
+                used = True
+                break
+
+        if rand in usedIDs or used == True:
             continue
         else:
             return rand
@@ -111,10 +114,12 @@ def game(plr, studentList, classes, dialogue):
         while actions > 0:
             IDs = []
             for i in range(0,3,1):
-                IDs.append([str(getRandID(usedIDs, IDs, dialogue)), random.choice(subject.GetAdjStudents())])
-                print(IDs)
-
-            print(IDs)
+                ID = getRandID(usedIDs, IDs, dialogue)
+                usedIDs.append(ID)
+                if len(usedIDs) == len(dialogue.dialogue):
+                    usedIDs = []
+                
+                IDs.append([str(ID), random.choice(subject.GetAdjStudents())])
 
             choice = typeAskSelection("Choose an action to take:",
                                       f"{dialogue.dialogue[IDs[0][0]]} to {IDs[0][1].name}",
@@ -126,11 +131,17 @@ def game(plr, studentList, classes, dialogue):
                 subject.grade += random.randint(3,5)
                 subject.grade = min(100,max(0,subject.grade))
 
+                typeWrite(random.choice(FOCUSPHRASES))
+
             else:
                 choice = IDs[choice-1]
                 responce, reaction = dialogue.tryDialogue(*choice)
                 typeWrite(f"{choice[1].name}: {responce}")
                 typeWrite(f"{choice[1].name}'s affection has changed by {reaction}")
+            
+            print('\n')
+
+            actions -= 1
 
 
         print('\n\nDONE\n\n')

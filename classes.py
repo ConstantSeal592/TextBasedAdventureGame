@@ -12,8 +12,8 @@ class Student:
         self.dialogue = data[3:]
 
     def response(self,id):
-        print(id)
         response,reaction = self.dialogue[id-1].split("|")
+        response = response.split(' ',1)[1]
         return response,int(reaction)
     
     def __repr__(self) -> str:
