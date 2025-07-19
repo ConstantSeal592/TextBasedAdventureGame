@@ -77,7 +77,7 @@ class Classroom:
         self.students = [player] + StudentList.copy()
         self.seating = []
         self.createSeating()
-        self.GetAdjStudents()
+
     def getGradeValue(self):
         if self.grade < 8:
             return 'U'
@@ -95,6 +95,7 @@ class Classroom:
             return 'A'
         elif self.grade < 93:
             return 'A*'
+        
     def GetAdjStudents(self):
         temp = []
         x,y = divmod(self.playerPos,(int(str((len(self.students)**0.5))[0])+1))
@@ -156,5 +157,5 @@ def InstantiateObjects():
     dialogue = Dialogue()
     return plr, StudentList, Classes, dialogue 
 
-player, students, Classes, dialogue = InstantiateObjects()
-dialogue.tryDialogue("4",students[1])
+# player, students, Classes, dialogue = InstantiateObjects()
+# dialogue.tryDialogue("4",students[1])
