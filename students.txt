@@ -7,21 +7,27 @@ kasra, a level 10 goon who enjoys playing desmos in his sparetime//DESCRIPTION
 Yashrith
 Nothing, hes a boring person
 
-&
-Leo
-
 
 &
-Lewis 
+Lewis
+A musical maths nerd who enjoys little more than playing a train game by himself while all his friends talk behind his back
+[music, maths, programmerWannaBe] 
 1 *Sighs* BUT I WANT IT BACK!¦0
 2 You can call me Louis if you want¦1
 3 I dont know, Hao about you?¦1
 4 ...Oh I know where I went wrong¦-1
-5 I could sure go for some dog¦
+5 I could sure go for some dog¦1
+6 Errrmmm, Im really not sure¦-1
+7 *Stares intensly*¦1
+8 *blushes*¦2
+9 Awwwwww :(¦-1
+10 *Slowly rotates his entire body to face you, grinning manically*¦3
 
 
 &
 Ilias
+Oh Ilias, where to start with ilias... Well he managed to eat a pencil once in primary school... and thats really about it
+[idiot]
 1 Sure *Hands over a well chewed still soggy pencil*¦-1
 2 You can call me the briscuit, or briscone, either or¦1
 3 Ehhhh good ta¦0
