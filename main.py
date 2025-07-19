@@ -4,6 +4,7 @@ from fileInteraction import LoadEndings,SaveNewEnding,saveAll,loadAll
 from classes import InstantiateObjects,getGradeValue
 
 NAME = "HEARTSTRING HIGH"
+DEBUGMODE = True
 
 FOCUSPHRASES = ["You lock in"]
 
@@ -13,12 +14,15 @@ def typeWrite(message, addNewLine=True, endOfLinePause = 0.75):
         if char == '.':
             section = message[i-2:i+3]
             if section.count('.') >= 3:
-                time.sleep(0.75)
+                if DEBUGMODE == False:
+                    time.sleep(0.75)
         elif not char in [' ', '\n']:
-            time.sleep(random.randint(3,14)/100)
+            if DEBUGMODE == False:
+                time.sleep(random.randint(3,14)/100)
 
     if addNewLine == True:
-        time.sleep(endOfLinePause)
+        if DEBUGMODE == False:
+            time.sleep(endOfLinePause)
         print()
 
 def getNumberInput(Min, Max):
@@ -173,6 +177,7 @@ def game(day, plr, studentList, classes, dialogue):
         typeWrite('-'*20+'+'+'-'*10)
         for student in studentList:
             typeWrite(student.name.ljust(20)+'|'+str(student.affection))
+        print('\n\n\n')
 
     typeWrite("Chuhao's time has come... Mrs Buck will lynch him if he couldnt go out on a date")
     typeWrite("But would anyone say yes?...")
@@ -198,7 +203,7 @@ def game(day, plr, studentList, classes, dialogue):
     typeWrite(f"They say...")
     typeWrite(f"... {'Yes' if success else 'No'}")
 
-    if success and calcAvgGrade() in ['U','F','E','D','C']:     #Fail
+    if success and calcAvgGrade(classes) in ['U','F','E','D','C']:     #Fail
         typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
         typeWrite("I hear you got a date says Mrs Buck, to which Chuhao vigorously nods")
         typeWrite("Well you managed it... but unfortunately your average grade was too low...")
@@ -206,7 +211,7 @@ def game(day, plr, studentList, classes, dialogue):
         print('\n\n')
         typeWrite("You got the... Fail Ending!")
         
-        data = SaveNewEnding('Fail', target.name, calcAvgGrade())
+        data = SaveNewEnding('Fail', target.name, calcAvgGrade(classes))
         printEnding(data)
     elif success and target.name == 'Alex':     #Alex
         typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
@@ -215,7 +220,7 @@ def game(day, plr, studentList, classes, dialogue):
         print('\n\n')
         typeWrite("You got the... Alex Ending!")
         
-        data = SaveNewEnding('Alex', target.name, calcAvgGrade())
+        data = SaveNewEnding('Alex', target.name, calcAvgGrade(classes))
     elif success:     #Good
         typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
         typeWrite("I hear you got a date says Mrs Buck, to which Chuhao vigorously nods")
@@ -223,7 +228,7 @@ def game(day, plr, studentList, classes, dialogue):
         print('\n\n')
         typeWrite("You got the... Good Ending!")
         
-        data = SaveNewEnding('Good', target.name, calcAvgGrade())
+        data = SaveNewEnding('Good', target.name, calcAvgGrade(classes))
         printEnding(data)
     else:   #Bad
         typeWrite("Chuhao returns to Mrs Buck's office gloomily")
@@ -232,7 +237,7 @@ def game(day, plr, studentList, classes, dialogue):
         print('\n\n')
         typeWrite("You got the... Bad Ending!")
         
-        data = SaveNewEnding('Bad', target.name, calcAvgGrade())
+        data = SaveNewEnding('Bad', target.name, calcAvgGrade(classes))
         printEnding(data)
 
 
