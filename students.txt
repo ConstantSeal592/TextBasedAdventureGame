@@ -1,6 +1,6 @@
 &
 kasra
-kasra, a level 10 goon who enjoys playing desmos in his sparetime//DESCRIPTION
+a level 10 goon who enjoys playing desmos in his sparetime//DESCRIPTION
 [maths,chinese,eSports] //INTERESTS 
 1 Yeah sure haha¦1
 2 i thought it was harold?¦-1
@@ -26,10 +26,6 @@ Nothing, hes a boring person
 9 NOW!¦1
 10 *jolts back a bit and starts sniggering*¦1
 &
-Leo
-
-
-&
 Lewis
 A musical maths nerd who enjoys little more than playing a train game by himself while all his friends talk behind his back
 [music, maths, programmerWannaBe] 
@@ -43,8 +39,6 @@ A musical maths nerd who enjoys little more than playing a train game by himself
 8 *blushes*¦2
 9 Awwwwww :(¦-1
 10 *Slowly rotates his entire body to face you, grinning manically*¦3
-
-
 &
 Ilias
 Oh Ilias, where to start with ilias... Well he managed to eat a pencil once in primary school... and thats really about it
@@ -59,8 +53,6 @@ Oh Ilias, where to start with ilias... Well he managed to eat a pencil once in p
 8 Ho Ho Ho, I know¦1
 9 Right you wanna go!... You wanna go mush???¦0
 10 *Slams knee into table with such force as to knock the table up a significant amount and cause a ruckus loud enough to attract the attension of the teacher*¦-3
-
-
 &
 Brad
 1 Do you think I have one?!?!¦1
@@ -73,8 +65,6 @@ Brad
 8 Haha, noooo, I dont think so¦2
 9 Awwww :(¦-1
 10 WHAT ON EARTH ARE YOU DOING?!?!¦-2
-
-
 &
 Alex
 alex, a level 100 goon who enjoys playing desmos in his sparetime//DESCRIPTION
