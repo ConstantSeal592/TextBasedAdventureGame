@@ -161,7 +161,7 @@ def createStudents():
 def InstantiateObjects():
     plr = Player()
     StudentList = createStudents()
-    Classes = [(Classroom(sub, plr, StudentList)) for sub in ["Physics", "Maths", "Further Maths", "Physics"]]
+    Classes = [(Classroom(sub, plr, StudentList)) for sub in ["Physics", "Maths", "Further Maths", "Computing"]]
     dialogue = Dialogue()
     return plr, StudentList, Classes, dialogue 
 
