@@ -177,6 +177,7 @@ def game(day, plr, studentList, classes, dialogue):
         typeWrite('-'*20+'+'+'-'*10)
         for student in studentList:
             typeWrite(student.name.ljust(20)+'|'+str(student.affection))
+        print('\n\n\n')
 
     typeWrite("Chuhao's time has come... Mrs Buck will lynch him if he couldnt go out on a date")
     typeWrite("But would anyone say yes?...")
