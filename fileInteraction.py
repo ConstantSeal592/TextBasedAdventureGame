@@ -1,4 +1,4 @@
-import json
+import json,pickle
 import datetime
 
 def LoadEndings():
@@ -23,5 +23,23 @@ def SaveNewEnding(EndingName, DateName, AvgGrade):
         'AvgGrade': AvgGrade
     }) + '\n')
 
+
+def saveClass(object,component):
+    with open(f'{component}.pkl', 'wb') as f:
+        pickle.dump(object, f)
+
+def saveAll(plr,StudentList,Classes):
+    saveClass(plr,"player")
+    saveClass(StudentList,"studentList")
+    saveClass(Classes,"classes")
+
+def loadAll():
+    with open(f'{"player"}.pkl', 'rb') as f:
+        player = pickle.load(f)
+    with open(f'{"studentList"}.pkl', 'rb') as f:
+        students = pickle.load(f)
+    with open(f'{"classes"}.pkl', 'rb') as f:
+        classes = pickle.load(f)
+    return player,students,classes
 # SaveNewEnding('Evil', 'Lewis', 100)
 # print(LoadEndings())
