@@ -4,7 +4,7 @@ from fileInteraction import LoadEndings,SaveNewEnding,saveAll,loadAll
 from classes import InstantiateObjects,getGradeValue
 
 NAME = "HEARTSTRING HIGH"
-DEBUGMODE = True
+DEBUGMODE = False
 
 FOCUSPHRASES = ["You lock in"]
 
