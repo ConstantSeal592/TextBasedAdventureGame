@@ -1,6 +1,7 @@
 import time
 import random
 from fileInteraction import LoadEndings
+from classes import InstantiateObjects
 
 NAME = "HEARTSTRING HIGH"
 
@@ -63,6 +64,8 @@ def newGameDialogue():
     typeWrite("Suddenly the door slams open and an angry scottish woman enters accompanied with a small bedraggled man dressed in all black.")
     typeWrite("The woman takes her place behind the desk infront of Chuhao glaring intensly at him")
 
+    game(InstantiateObjects())
+
 SQUARESIDES = 5
 def displayEndings():
     endings = LoadEndings()
@@ -82,6 +85,59 @@ def displayEndings():
                 print('#' + ' '*((SQUARESIDES-2)*2 + 1) + '#')        
         print('# '*SQUARESIDES)
         print()
+
+
+def getRandID(usedIDs, IDs, dialogue):
+    while len(IDs) < 3:
+        rand = random.randint(1, len(dialogue.dialogue))
+        if rand in usedIDs:
+            if usedIDs == len(dialogue.dialogue):
+                usedIDs = []
+                IDs.append(rand)
+            else:
+                continue
+        elif rand in IDs:
+            continue
+        else:
+            IDs.append(rand)
+
+def game(plr, studentList, classes, dialogue):
+    usedIDs = []
+    for subject in classes:
+        typeWrite(f"You enter {subject.subject}...")
+        print()
+        
+        actions = 5
+        while actions > 0:
+            IDs = []
+            for i in range(0,3,1):
+                getRandID(usedIDs, IDs, dialogue)
+                IDs[-1] = [IDs[-1], random.choice(subject.GetAdjStudents())]
+
+            choice = typeAskSelection("Choose an action to take:",
+                                      f"{dialogue.dialogue[IDs[0][0]]} to {IDs[0][1]}",
+                                      f"{dialogue.dialogue[IDs[1][0]]} to {IDs[1][1]}",
+                                      f"{dialogue.dialogue[IDs[2][0]]} to {IDs[2][1]}",
+                                      "Focus on work")
+            
+            if choice == 4:
+                subject.grade += random.randint(3,5)
+                subject.grade = min(100,max(0,subject.grade))
+
+            else:
+                choice = IDs[choice-1]
+                responce, reaction = dialogue.tryDialogue(*choice)
+                typeWrite(f"{choice[1].name}: {responce}")
+                typeWrite(f"{choice[1].name}'s affection has changed by {reaction}")
+
+
+        print('\n\nDONE\n\n')
+
+
+
+
+
+
 
 def main():
     print('\n'.join([

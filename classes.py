@@ -38,14 +38,9 @@ class Dialogue:
             
 
      def tryDialogue(self,id,student):
-        print(self.dialogue[id])
         response,reaction = student.response(int(id))
-        print(response.split(" ",1)[1])
         student.affection += reaction
-        if reaction < 0:
-            print(f"{student.name}'s affection has lowered by {reaction}")
-        else:
-            print(f"{student.name}'s affection has raised by {reaction}")
+        return response, reaction
         
     
 class Player:
@@ -135,7 +130,7 @@ def InstantiateObjects():
     StudentList = createStudents()
     Classes = [(Classroom(sub, plr, StudentList)) for sub in ["Physics", "Maths", "Further Maths", "Physics"]]
     dialogue = Dialogue()
-    return plr, StudentList, Classes,dialogue 
+    return plr, StudentList, Classes, dialogue 
 
 player, students, Classes, dialogue = InstantiateObjects()
 dialogue.tryDialogue("4",students[1])
