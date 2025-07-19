@@ -246,12 +246,14 @@ def main():
           '#'*40
     ]))
     
-    while True:
+    running = True
+    while running:
         
         choice = typeAskSelection("Choose Your Action:",
                                 "Start new game",
                                 "Load game",
-                                "View endings")
+                                "View endings",
+                                "Quit")
         
         if choice == 1:
             newGameDialogue()
@@ -264,5 +266,7 @@ def main():
             game(*loadAll(),dialogue)
         elif choice == 3:
             displayEndings()
+        elif choice == 4:
+            running = False
     
 main()
