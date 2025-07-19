@@ -32,6 +32,7 @@ class Dialogue:
             text = text.split("&")[1:]
             for i,option in enumerate(text):
                 text[i] = option.split("\n")[1:] # type: ignore   
+            text = text[:10]
 
         for i in range(len(text)):
             data = text[i]
