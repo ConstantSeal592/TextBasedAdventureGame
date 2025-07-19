@@ -203,7 +203,7 @@ def game(day, plr, studentList, classes, dialogue):
     typeWrite(f"They say...")
     typeWrite(f"... {'Yes' if success else 'No'}")
 
-    if success and calcAvgGrade() in ['U','F','E','D','C']:     #Fail
+    if success and calcAvgGrade(classes) in ['U','F','E','D','C']:     #Fail
         typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
         typeWrite("I hear you got a date says Mrs Buck, to which Chuhao vigorously nods")
         typeWrite("Well you managed it... but unfortunately your average grade was too low...")
@@ -211,7 +211,7 @@ def game(day, plr, studentList, classes, dialogue):
         print('\n\n')
         typeWrite("You got the... Fail Ending!")
         
-        data = SaveNewEnding('Fail', target.name, calcAvgGrade())
+        data = SaveNewEnding('Fail', target.name, calcAvgGrade(classes))
         printEnding(data)
     elif success and target.name == 'Alex':     #Alex
         typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
@@ -220,7 +220,7 @@ def game(day, plr, studentList, classes, dialogue):
         print('\n\n')
         typeWrite("You got the... Alex Ending!")
         
-        data = SaveNewEnding('Alex', target.name, calcAvgGrade())
+        data = SaveNewEnding('Alex', target.name, calcAvgGrade(classes))
     elif success:     #Good
         typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
         typeWrite("I hear you got a date says Mrs Buck, to which Chuhao vigorously nods")
@@ -228,7 +228,7 @@ def game(day, plr, studentList, classes, dialogue):
         print('\n\n')
         typeWrite("You got the... Good Ending!")
         
-        data = SaveNewEnding('Good', target.name, calcAvgGrade())
+        data = SaveNewEnding('Good', target.name, calcAvgGrade(classes))
         printEnding(data)
     else:   #Bad
         typeWrite("Chuhao returns to Mrs Buck's office gloomily")
@@ -237,7 +237,7 @@ def game(day, plr, studentList, classes, dialogue):
         print('\n\n')
         typeWrite("You got the... Bad Ending!")
         
-        data = SaveNewEnding('Bad', target.name, calcAvgGrade())
+        data = SaveNewEnding('Bad', target.name, calcAvgGrade(classes))
         printEnding(data)
 
 
