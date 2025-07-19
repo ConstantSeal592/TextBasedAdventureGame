@@ -95,7 +95,7 @@ def displayEndings():
     typeWrite('Endings:')
     print()
     for ending in endings:
-        printEnding()
+        printEnding(ending)
 
 
 def getRandID(usedIDs, IDs, dialogue):
@@ -130,7 +130,7 @@ def game(day, plr, studentList, classes, dialogue):
             typeWrite(f"You enter {subject.subject}...")
             print()
 
-            actions = 0
+            actions = 3
             while actions > 0:
                 IDs = []
                 for i in range(0,3,1):
@@ -202,7 +202,7 @@ def game(day, plr, studentList, classes, dialogue):
         typeWrite("Chuhao returns to Mrs Buck's office with a spring in his step")
         typeWrite("I hear you got a date says Mrs Buck, to which Chuhao vigorously nods")
         typeWrite("Well you managed it... but unfortunately your average grade was too low...")
-        typeWrite("Therefore you are now obligated to go to Caistor Yarborough... good luck getting a date there")
+        typeWrite("Therefore you are now obligated to go to Caistor Yarb3orough... good luck getting a date there")
         print('\n\n')
         typeWrite("You got the... Fail Ending!")
         
