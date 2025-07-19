@@ -79,6 +79,7 @@ class Classroom:
         self.students = [player] + StudentList.copy()
         self.seating = []
         self.createSeating()
+        self.GetAdjStudents()
 
     def getGradeValue(self):
         if self.grade < 8:
@@ -101,6 +102,7 @@ class Classroom:
     def GetAdjStudents(self):
         temp = []
         x,y = divmod(self.playerPos,(int(str((len(self.students)**0.5))[0])+1))
+        print(x,y)
         try:
             temp.append(self.seating[x+1][y])
         except:
@@ -114,9 +116,13 @@ class Classroom:
         except:
             pass
         try:
-            temp.append(self.seating[x][y-1])
+            if self.seating[x][y-1] == self.player:
+                pass
+            else:
+                temp.append(self.seating[x][y-1])
         except:
             pass
+        print(temp)
         return temp
         
         
@@ -159,5 +165,5 @@ def InstantiateObjects():
     dialogue = Dialogue()
     return plr, StudentList, Classes, dialogue 
 
-# player, students, Classes, dialogue = InstantiateObjects()
+player, students, Classes, dialogue = InstantiateObjects()
 # dialogue.tryDialogue("4",students[1])
