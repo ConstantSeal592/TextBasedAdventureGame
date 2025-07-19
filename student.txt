@@ -12,36 +12,36 @@ a level 10 goon who enjoys playing desmos in his sparetime//DESCRIPTION
 8 *kasra takes it as sarcasm and ignores you*|-1
 9 not very nice mush|-1
 10 *slurps and does the same to you*|2
-11 *throws pencil at you* "Fix it yourself"|-2
+11 *throws pencil at you* "BRO"|-2
 12 *chokes you back* FIGHT ME!|-4
 13 你说什么? (What you say?)|0
-14 My chair's comfier than your lap|1
+14 My chair's comfier than your lap|-1
 15 Based|2
 16 The mustard's in my bag, mush|1
 17 f*** you n****r |0
 18 I'll sit, you stand|1
 19 *laughs hysterically*|3
-20 Only if they're good at Desmos|1
-21 *grabs back harder*|0
-22 Still waiting for Desmos tournament|1
-23 Grinded Desmos for 48hrs straight|3
-24 Keep it, I've got 12 more|-1
-25 Only if we do math olympiad|1
-26 Nah, Desmos > food|2
-27 The page where you stop talking|-1
-28 Your love life story again?|-2
+20 *slurps and rubs his hands together*|1
+21 *grabs back harder*|1
+22 good mush|1
+23 Good, good, lots of gooning|3
+24 oh cheers mush|1
+25 gatekeeping|1
+26 sure *inhales through big nose*|2
+27 Errrmmm its probably on the board|-1
+28 litterally everything|1
 29 Finished it before class|2
-30 Only Desmos in my family|1
-31 *mutters in chinese* 闭嘴 (shut up)|-1
-32 Saved you a virus link|1
-33 Notes are for weaklings|2
-34 *writes "ur bad at Desmos"*|-2
-35 *adds monocle to moustache*|3
-36 *imagine there is a chinese message for i love u* (I don't love you)|-2
-37 *graphs desmos equations*|3
-38 Why you so bad at math?|-1
-39 *calls police*|-5
-40 *stares at your screen* "Wrong equation"|-1
+30 yeah you know him though????|-2
+31 *mutters in fake chinese* 闭嘴 (shut up)|-1
+32 ur so cute chuhao|1
+33 i really hope so|1
+34 *reads it and is disguisted, its a 1 to 1 picture of him mum with chuhao*|-4
+35 *crashes out*|-2
+36 *imagine there is a chinese message for i love u* (he doesn't love you)|-1
+37 *draws a penis*|3
+38 cannot answer the question|-1
+39 goons it|3
+40 *stares at you confused* |-1
 &
 Yashrith
 Nothing, hes a boring person
@@ -56,36 +56,36 @@ Nothing, hes a boring person
 8 always has been|1
 9 NOW!|1
 10 *jolts back a bit and starts sniggering*|1
-11 *hands tissue* "Here"|0
-12 *freezes*|-3
+11 *uses tissue* "dont worry about it"|-2
+12 *looks shocked and starts getting into it*|2
 13 *sighs*|-1
 14 No thanks|0
-15 *stares blankly*|-1
+15 its just not on, now is it mush|-1
 16 Mustard?|0
 17 Its... normal?|-1
-18 No thanks|0
-19 *yawns*|0
-20 They're alright|0
-21 *shakes leg free*|-1
+18 yes please harold|2
+19 *starts laughing uncontrollably*|3
+20 They're alright|1
+21 *light work, no reaction*|1
 22 Fine|0
 23 Fine|0
 24 Thanks|1
-25 No|0
+25 No, im not.|0
 26 No|0
 27 42|0
 28 Nothing|0
-29 Yes|1
-30 Yes|0
-31 *shrugs*|0
-32 Okay|0
+29 Yes. all over it.|1
+30 yes, but u already know that dont you|-1
+31 *crashes out*|0
+32 Okay *proceeds to sit on your lap* |2
 33 Probably not|0
-34 *reads and tosses*|0
-35 *wipes it off*|-1
-36 *confused stare*|-1
+34 *reads and passes to kasra*|0
+35 *wipes it off annoyed*|-2
+36 chingchinglingling|1
 37 *ignores*|0
 38 What?|0
-39 *leaves*|-3
-40 *looks away*|0
+39 *accept it* |1
+40 *stares back lovingly*|1
 &
 Lewis
 A musical maths nerd who enjoys little more than playing a train game by himself while all his friends talk behind his back
@@ -228,7 +228,7 @@ alex, a level 100 goon who enjoys playing desmos in his sparetime//DESCRIPTION
 4 Well lets see where you went wrong *sighs*|0
 5 You really should pay attension in form, this was told to you|-1
 6 *smiles gleefully*|3
-7 Idiot|-1
+7 Wacks Chuhaos exposed and vulnerable arse|3
 8 I know|1
 9 *repeats back mockingly*|-2
 10 *jumps into the ceiling with surprise*|-1
